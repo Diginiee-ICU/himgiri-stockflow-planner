@@ -1,0 +1,31 @@
+# Warehouse improvements
+- [x] Add per-part stock / per-product requirement / maximum-build breakdown on the dashboard; 13 arithmetic tests and signed-in desktop/mobile checks passed, including limiting parts and division results.
+- [ ] Complete himgiriladders.in lead delivery — manager-only Leads inbox and signed, bounded, idempotent receiver are built; website currently has phone/WhatsApp only. Blocked on adding a website enquiry form, publishing the receiver and configuring the same shared signing secret in both apps. No real lead delivery has been verified. Setup contract is in WEBSITE-LEADS.md.
+- [x] Add plus/minus and direct entry controls for each suggested BOM quantity; live signed-in AI draft verified on mobile: 4→5→4, direct entry 6 reaches review, editing to 7 clears confirmation; 11 onboarding tests pass. No inventory created during verification.
+- [x] Show every finished product and assembly’s BOM-based manufacturing capacity on the dashboard; limiting-part/reservation calculations pass nine tests, and signed-in mobile/desktop display and refresh verified. Current ladder capacity is zero because its component stock is zero.
+- [x] Enable manager photo-based BOM suggestions for ladders as well as other products, with editable per-ladder quantities and mandatory review; signed-in mobile upload and live AI result verified (11 suggested part types); 11 targeted tests pass.
+- [x] Add the attached 5-step ladder, twelve individually pictured part types and a clearly unverified photo-based BOM; zero opening stock, 12 distinct part images and 23 assemblies/kits verified in stored records; all 13 image URLs load.
+- [x] Fresh remix: replace FIRST_ADMIN_SETUP_CODE through the secure form and verify the migration set is empty with consistent live history; stored data unchanged.
+- [x] Add secure, one-time first-admin setup with a private code, attempt limit, atomic closure and invitation-only staff access; wrong-code rejection verified on mobile.
+- [ ] Verify successful first-admin creation and dashboard access — blocked: owner must enter their private code and chosen password; testing completion would permanently claim the real setup.
+- [x] Check the newly requested remix migration baseline: migration journal empty and live history consistent.
+- [x] Add Android/iOS home-screen support, warehouse branding, matching app icons/favicon; sign-in/setup checked at 320px, 390px, 414px and desktop.
+- [ ] Verify signed-in warehouse screens on mobile — blocked: no auth users; complete first-time setup first.
+- [x] Replace shared category pictures with individual images for all 18 inventory items; verified distinct assignments and image loading.
+- [x] Generate inventory illustrations and show them for every existing item.
+- [x] Simplify admin/employee navigation with a menu button and clear daily actions.
+- [x] Add named material requests and admin-approved stock issues.
+- [x] Add production stock preview and immutable physical counts with reviewed adjustments.
+- [x] Remix: rebuild full database schema (empty migration set after remix) and reseed demo data.
+- [x] Swap the 5-Step ladder's sample image for the user's real product photo (clean version, labels removed).
+- [ ] Replace remaining sample images with real photos as the user sends them (3-Step, 4-Step, 6-Step, 7-Step, and parts).
+- [ ] Verify the signed-in workflow end-to-end — blocked: no auth users in remixed project and test emails are rejected; user must complete first-time setup with a real email.
+- [x] Remix setup: empty migration set confirmed
+- [x] Verify this remix has cleared copied migrations and an empty migration journal.
+- [x] Implement the advanced Ladder / Other product wizard with reviewed AI parts, individual photo uploads, and opening stock.
+- [ ] Verify signed-in product creation and photo uploads — blocked: the remixed project has no auth users.
+- [x] Verify successful AI product-photo suggestions — live signed-in manager request returned 11 draft part types on 7 November 2026.
+- [x] Update signup handling to enter the app immediately when signup returns a session.
+- [ ] Enable auto-confirm for all email/password signups — blocked until existing auth security settings can be preserved safely.
+- [x] Add production target shortage forecasting and low-stock reorder summary.
+- [x] Add filtered, downloadable inventory and stock-ledger reports.
